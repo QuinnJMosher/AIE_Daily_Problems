@@ -10,9 +10,30 @@ namespace _4_21_15
     {
         static void Main(string[] args)
         {
-            //a valid number: 0-7475-3269-9
-            Console.WriteLine(verifyISBN("0-0000-0040-X"));
-            Console.Read();//pause console
+            //isbn test
+            ////a valid number: 0-7475-3269-9
+            //Console.WriteLine(verifyISBN("0-0000-0040-X"));
+
+            for (int i = 1; i <= 100; i++)
+            {
+                Console.WriteLine(i + ": " + FizzBuzz(i));
+            }
+
+                Console.Read();//pause console
+        }
+
+        static string FizzBuzz(int input)
+        {
+            string output = "";
+            if (input % 3 == 0)
+            {
+                output += "Fizz";
+            }
+            if (input % 5 == 0)
+            {
+                output += "Buzz";
+            }
+            return output;
         }
 
         static bool verifyISBN(string in_isbn)
